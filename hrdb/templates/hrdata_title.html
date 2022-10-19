@@ -1,0 +1,19 @@
+<!-- タイトルとナビゲーションボタン -->
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+
+        <!-- タイトルと本文 -->
+        <h1 class="fw-light">協力者情報</h1>
+        {% if user.is_authenticated  %}
+        <p class="lead text-muted">現在テストデータを使って稼働しています。表示されている組織名や名前は架空のものです。実在の人物・団体とは一切関係ありません。</p>
+        {% else %}
+        <p class="lead text-muted">現在テストデータを使って稼働しています。表示されている組織名や名前は架空のものです。実在の人物・団体とは一切関係ありません。</p>
+        <p>
+          <a href="{% url 'accounts:signup' %}" class="btn btn-primary my-2">今すぐサインアップ</a>
+          <a href="{% url 'accounts:login' %}" class="btn btn-secondary my-2">登録済みの方はログイン</a>
+        </p>
+        {% endif %}
+      </div>
+    </div>
+  </section>
